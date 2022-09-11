@@ -14,29 +14,34 @@ let damage = {
 }
 
 function game() {
-  whoStarts.style.display = 'none'
-  yourDamage.style.display = 'block'
-  let whoInitial = prompt(`  
-  Bem-vindo ao jogo.
-  Quem irá começar atacando 
-  Você ou o Oscar?`).toLowerCase()
+  whoStarts.style.display = 'block'
+  part6.style.display = 'none'
+
   setTimeout(() => {
-    if (whoInitial == 'eu') {
-      alert('Você começa atacando')
-      myBlow()
-    } else if (whoInitial === 'oscar') {
-      alert('Oscar começará atacando')
-      blowOscar()
-    } else if (
-      whoInitial != 'oscar' ||
-      whoInitial == '' ||
-      whoInitial == undefined ||
-      whoInitial == null
-    ) {
-      alert('Indique um personagem válido')
-      game()
-    }
-  }, 10)
+    let whoInitial = prompt(`  
+    Bem-vindo ao jogo.
+    Quem irá começar atacando 
+    Você ou o Oscar?`).toLowerCase()
+    setTimeout(() => {
+      yourDamage.style.display = 'block'
+      whoStarts.style.display = 'none'
+      if (whoInitial == 'eu') {
+        alert('Você começa atacando')
+        myBlow()
+      } else if (whoInitial === 'oscar') {
+        alert('Oscar começará atacando')
+        blowOscar()
+      } else if (
+        whoInitial != 'oscar' ||
+        whoInitial == '' ||
+        whoInitial == undefined ||
+        whoInitial == null
+      ) {
+        alert('Indique um personagem válido')
+        game()
+      }
+    }, 10)
+  }, 100)
 }
 function blowOscar() {
   let damageIndex = damage.randomSelection
@@ -134,7 +139,3 @@ function gameOver(winner) {
   }
   validationFinal(yesOurNo)
 }
-
-setTimeout(() => {
-  game()
-}, 100)

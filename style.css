@@ -1,19 +1,151 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   border: none;
 }
-main{
+a {
+  text-decoration: none;
+  color: white;
+}
+main {
   background-color: black;
   width: 100vw;
   height: 100vh;
   color: white;
 }
-.seuDano{
+.center {
+  width: 100vw;
+  flex-direction: column;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 50px;
+}
+button.next {
+  padding: 10px 40px;
+  border-radius: 10px;
+  background-color: #ccc;
+  margin-top: 50px;
+  cursor: pointer;
+  margin-left: 40px;
+  transition-duration: 800ms;
+  font-size: 18px;
+}
+button.next:hover {
+  background-color: #111;
+  color: #eee;
+}
+.containerParagraphy {
+  margin-left: 40px;
+  background-color: rgba(0, 0, 0, 0.712);
+  width: 450px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.part1 {
+  padding-top: 50px;
+  font-size: 30px;
+  background-image: url('https://www.torredevigilancia.com/wp-content/uploads/2018/04/dark-imagem-1.jpg');
+  background-position: center;
+  height: 100vh;
+  background-size: cover;
+}
+
+.part2 {
+  display: none;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  animation-name: showSlow;
+  animation-duration: 4s;
+}
+@keyframes showSlow {
+  0% {
+    background-image: url('https://img.freepik.com/premium-photo/dark-grey-black-slate-texture-with-high-resolution-background-natural-black-stone-wall_38607-444.jpg?w=360');
+  }
+  50% {
+    background-image: url('https://st4.depositphotos.com/9904426/21289/i/450/depositphotos_212890188-stock-photo-silhouette-unknown-shadow-figure-door.jpg');
+  }
+  70% {
+    background-image: url('https://st4.depositphotos.com/9904426/21289/i/450/depositphotos_212890188-stock-photo-silhouette-unknown-shadow-figure-door.jpg');
+  }
+  100% {
+    background-image: url('https://img.freepik.com/premium-photo/dark-grey-black-slate-texture-with-high-resolution-background-natural-black-stone-wall_38607-444.jpg?w=360');
+  }
+}
+.part3 {
+  display: none;
+  background-image: url('https://myownprivatepath.files.wordpress.com/2010/05/sombrio.jpg');
+  background-position: center;
+  justify-content: center;
+  flex-direction: column;
+  background-size: cover;
+  align-items: flex-start;
+  font-size: 25px;
+  height: 100vh;
+}
+.part4 {
+  display: none;
+
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_m2A5wWBOPBBP60cwGVX8P_wLgBFQcFsfng&usqp=CAU');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+.part4 p {
+  width: 80vw;
+  text-shadow: 1px 1px 4px #000;
+  font-size: 80px;
+  text-align: center;
+  animation: bgColor 4s;
+}
+@keyframes bgColor {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  50% {
+    background-color: rgba(0, 0, 0, 0.493);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+.part5 {
+  display: none;
+  padding-top: 50px;
+  background-image: url('http://4.bp.blogspot.com/-6mnb4WMsoH4/VlMS0A6xq0I/AAAAAAAAACs/p9lC-TbrH-w/s1600/Mestre%2Be%2Bdiscipulo.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  font-size: 30px;
+}
+.part6 {
+  display: none;
+  background-image: url('https://i.gifer.com/origin/f0/f06bfb70bdaaff6692520c8774f45e8c.gif');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding-bottom: 50px;
+}
+.part6 button{
+  background-color: rgb(30, 6, 95);
+  color: #fff;
+}
+.definirQuemComeca {
   display: none;
 }
-.gameOver{
+.seuDano {
+  display: none;
+}
+h1 {
+  display: none;
+}
+.gameOver {
   width: 100vw;
   color: red;
   font-size: 90px;
@@ -28,13 +160,13 @@ main{
   animation-timing-function: linear;
 }
 @keyframes pulse {
-  0%{
-  font-size: 90px;
+  0% {
+    font-size: 90px;
   }
-  50%{
-  font-size: 120px;
+  50% {
+    font-size: 120px;
   }
-  100%{
-  font-size: 90px;
+  100% {
+    font-size: 90px;
   }
 }
