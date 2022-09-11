@@ -1,0 +1,40 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+}
+main{
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+}
+.seuDano{
+  display: none;
+}
+.gameOver{
+  width: 100vw;
+  color: red;
+  font-size: 90px;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes pulse {
+  0%{
+  font-size: 90px;
+  }
+  50%{
+  font-size: 120px;
+  }
+  100%{
+  font-size: 90px;
+  }
+}
